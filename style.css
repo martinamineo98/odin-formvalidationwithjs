@@ -1,0 +1,107 @@
+
+/* -------------------------------------------------------- VARIABLES */
+
+:root {
+	--sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--main-font-family: var(--sans-serif);
+}
+
+/* ------------------------------------------------------------ RESET */
+
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 10px;
+}
+
+form,
+input,
+button,
+select {
+  font-size: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ---------------------------------------------------------- GENERAL */
+
+body {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: calc(1.6rem + .5vmin) var(--main-font-family);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	font-size: calc(1.6rem + .5vmin);
+	font-family: var(--main-font-family);
+	gap: 10px;
+	padding: 15px;
+}
+
+form > div:not(.error):not(.success) {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	place-items: center;
+}
+
+input {
+	background-color: #FFFFFF;
+	border: 2px solid #EEEEEE;
+	border-radius: 5px;
+	padding: 1ch 1.5ch;
+}
+
+button {
+	background-color: hsl(125deg, 50%, 50%);
+	padding: 1ch 1.5ch;
+	max-width: 100px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button.submitted {
+	background-color: #EEEEEE;
+}
+
+div.error,
+div.success {
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	padding: 1ch 1.5ch;
+	max-height: calc(1ch + (1.5ch * 2) + (2px * 2));
+	max-width: 500px;
+	overflow: hidden;
+}
+
+.error {
+	border-color: hsl(0deg, 50%, 50%);
+}
+
+.success {
+	border-color: hsl(125deg, 50%, 50%);
+}
